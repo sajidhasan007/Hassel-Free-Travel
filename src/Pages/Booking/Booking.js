@@ -29,6 +29,9 @@ const Booking = () => {
         let event_book = {
             email: user.email,
             name: user.name,
+            event_name: event.event_name,
+            event_fee: event.event_fee,
+            date: event.date,
             address: addressRef.current.value,
             phone: phoneRef.current.value,
             station: stationRef.current.value,

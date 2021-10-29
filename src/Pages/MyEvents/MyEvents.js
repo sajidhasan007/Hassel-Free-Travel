@@ -1,22 +1,37 @@
-import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-import './ManageEvent.css';
+import useAuth from '../Hooks/useAuth';
+import './MyEvent.css';
 
-const ManageEvent = () => {
-    const [bookedevents, setBookevents] = useState([]);
+const MyEvents = () => {
+    const [myEvents, setMyEvents] = useState([]);
+    const { user } = useAuth();
+    const email = {
+        email: user?.email
+    };
+    console.log(email);
+
     useEffect(() => {
-        fetch('http://localhost:5000/manageEvent')
+
+        fetch('http://localhost:5000/myevents', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(email)
+        })
             .then(res => res.json())
-            .then(data => setBookevents(data))
+            .then(data => {
+                setMyEvents(data);
+            })
     }, [])
-    console.log(bookedevents);
+    //console.log(myEvents);
     return (
         <div>
-            <h1 className='text-center '>Here is all order</h1>
+            <div className='text-center'>
+                <h1>All Orders of <span className='special-text'>{user.name}</span></h1>
+            </div>
+
             <div>
-                {bookedevents.map(item => <>
+                {myEvents.map(item => <>
                     <Container>
                         <div className='manage-event mb-3 px-5 py-3'>
                             <h3>Event Name: {item.event_name}</h3>
@@ -33,8 +48,9 @@ const ManageEvent = () => {
                     </Container>
                 </>)}
             </div>
+
         </div>
     );
 };
 
-export default ManageEvent;
+export default MyEvents;
