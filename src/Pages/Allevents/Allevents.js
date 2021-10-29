@@ -20,6 +20,7 @@ const Allevents = (props) => {
                         {description.slice(0, 100)}
                         <span> ...</span>
                     </Card.Text>
+                    <Link className='me-3' to={`/book/${_id}`}><button className="btn btn-primary">Book Event</button></Link>
                     <Link to={`/event/${_id}`}><button className="btn btn-warning">Details</button></Link>
                 </Card.Body>
             </Card>

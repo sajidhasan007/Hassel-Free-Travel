@@ -35,7 +35,7 @@ const Event = () => {
                             {particularservice?.description}
                         </Card.Text>
 
-                        <Link to={`/home`}><button className="btn btn-warning">Go-Back</button></Link>
+                        <Link to={`/book/${particularservice._id}`}><button className="btn btn-warning">Book Event</button></Link>
                     </Card.Body>
                 </Card>
             </div>

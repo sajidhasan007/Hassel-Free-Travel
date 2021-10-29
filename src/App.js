@@ -8,6 +8,8 @@ import Home from './Pages/Home_page/Home/Home';
 import Event from './Pages/Event/Event';
 import Login from './Pages/Login/Login';
 import AuthProvider from './Pages/Firebase/AuthProvider';
+import PrivateRoute from './Pages/Privateroute/PrivateRoute';
+import Booking from './Pages/Booking/Booking';
 function App() {
   return (
     <div className="App">
@@ -23,9 +25,13 @@ function App() {
               <Home></Home>
             </Route>
 
-            <Route path='/event/:eventid'>
+            <PrivateRoute path='/event/:eventid'>
               <Event></Event>
-            </Route>
+            </PrivateRoute>
+
+            <PrivateRoute path='/book/:eventid'>
+              <Booking></Booking>
+            </PrivateRoute>
 
             <Route path='/login'>
               <Login></Login>
