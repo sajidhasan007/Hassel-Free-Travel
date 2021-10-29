@@ -10,9 +10,10 @@ import Login from './Pages/Login/Login';
 import AuthProvider from './Pages/Firebase/AuthProvider';
 import PrivateRoute from './Pages/Privateroute/PrivateRoute';
 import Booking from './Pages/Booking/Booking';
+import ManageEvent from './Pages/ManageEvent/ManageEvent';
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <AuthProvider>
         <Router>
           <Header></Header>
@@ -31,6 +32,10 @@ function App() {
 
             <PrivateRoute path='/book/:eventid'>
               <Booking></Booking>
+            </PrivateRoute>
+
+            <PrivateRoute path='/manageEvent'>
+              <ManageEvent></ManageEvent>
             </PrivateRoute>
 
             <Route path='/login'>

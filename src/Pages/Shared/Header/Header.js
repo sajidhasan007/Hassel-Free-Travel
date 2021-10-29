@@ -24,7 +24,7 @@ const Header = () => {
                         {user?.email && <>
                             <Nav.Link as={HashLink} to="/">My Events</Nav.Link>
                             <Nav.Link as={HashLink} to="/">Add Event</Nav.Link>
-                            <Nav.Link as={HashLink} to="/">Manage Events</Nav.Link>
+                            <Nav.Link as={HashLink} to="/manageEvent">Manage Events</Nav.Link>
                         </>}
 
                         {user?.email ?

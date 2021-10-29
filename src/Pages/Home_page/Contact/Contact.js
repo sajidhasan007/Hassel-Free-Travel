@@ -8,21 +8,26 @@ const Contact = () => {
     const onSubmit = data => console.log(data);
 
     return (
+
         <div className='subscribe'>
-            <div className='mb-5'>
-                <h2>Save time, save money!</h2>
-                <p>Sign up and we'll send the best deals to you</p>
-            </div>
+            <div className='d-flex justify-content-center'>
+                <div>
+                    <div className='mb-5'>
+                        <h2>Save time, save money!</h2>
+                        <p>Sign up and we'll send the best deals to you</p>
+                    </div>
 
-            <div>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    {/* include validation with required or other standard HTML validation rules */}
-                    <input className='py-2 px-3 border-rounded' {...register("exampleRequired", { required: true })} Placeholder='your email' />
-                    {/* errors will return when field validation fails  */}
-                    {errors.exampleRequired && <span>This field is required</span>}
+                    <div>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            {/* include validation with required or other standard HTML validation rules */}
+                            <input className='py-2 px-3 border-rounded' {...register("exampleRequired", { required: true })} Placeholder='your email' />
+                            {/* errors will return when field validation fails  */}
+                            {errors.exampleRequired && <span>This field is required</span>}
 
-                    <input className='py-2 px-3 ms-1 subscribe-input-submit' type="submit" value='Subscribe' />
-                </form>
+                            <input className='py-2 px-3 ms-1 subscribe-input-submit' type="submit" value='Subscribe' />
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     );
