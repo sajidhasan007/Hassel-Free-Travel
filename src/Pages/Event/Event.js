@@ -26,7 +26,7 @@ const Event = () => {
         <div className='d-flex justify-content-center'>
 
             <div>
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '20rem' }}>
                     <Card.Img variant="top" src={particularservice?.event_img} />
                     <Card.Body>
                         <Card.Title>{particularservice?.event_name}</Card.Title>

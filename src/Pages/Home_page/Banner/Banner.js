@@ -4,8 +4,8 @@ import './Banner.css';
 
 import banner1 from '../../../images/banner1.jpg';
 import banner2 from '../../../images/banner3.jpg';
-import banner3 from '../../../images/banner4.jpg';
-import banner4 from '../../../images/banner5.jpg';
+import banner3 from '../../../images/banner2.jpg';
+import banner4 from '../../../images/banner4.jpg';
 
 
 const Banner = () => {
@@ -21,8 +21,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>Patient Checking Room</h3>
-                        <p>This chair is very relaxing you will feel comfort</p>
+                        <h3>Our Last Month Tour (Rangamati) </h3>
+                        <p>That was a fimily tour so we accept male and female</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -33,8 +33,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Another Patient Checking Rook</h3>
-                        <p>This chair is very relaxing you will feel comfort</p>
+                        <h3>Our Last Month Tour at Nijom Deep</h3>
+                        <p>That tour was not a family tour so we did not allow female traveler</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -45,8 +45,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Our Team Leader</h3>
-                        <p>He is so kind and patient person we all love him</p>
+                        <h3>Monst Attractive Waterfall "Nafa Khum"</h3>
+                        <p>This tour is so hard you have to walk 5-8 hour to react here</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -57,8 +57,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Our Team Leader</h3>
-                        <p>He is so kind and patient person we all love him</p>
+                        <h3>This is Our Hassle Free Travel Team</h3>
+                        <p>Here we are six admin and we have six sub-admin in total 12 person</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

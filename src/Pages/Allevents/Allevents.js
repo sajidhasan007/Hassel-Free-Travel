@@ -10,14 +10,14 @@ const Allevents = (props) => {
     // console.log(_id, event_name, event_img);
     return (
         <Col key={events._id}>
-            <Card>
+            <Card className='h-100'>
                 <div className='d-flex justify-content-center'>
                     <Card.Img className='my-coustom d-flex justify-content-center' variant="top" src={event_img} />
                 </div>
                 <Card.Body>
                     <Card.Title>{event_name}</Card.Title>
                     <Card.Text>
-                        {description.slice(0, 100)}
+                        {description.slice(0, 90)}
                         <span> ...</span>
                     </Card.Text>
                     <Link className='me-3' to={`/book/${_id}`}><button className="btn btn-primary">Book Event</button></Link>

@@ -28,7 +28,7 @@ const Events = () => {
             </div>
             <div>
                 <Container>
-                    <Row xs={1} md={3} className="g-4">
+                    <Row xs={1} md={2} lg={3} className="g-4">
                         {events.map(event => (
                             <Allevents
                                 key={event._id}

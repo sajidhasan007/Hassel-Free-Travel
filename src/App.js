@@ -13,6 +13,7 @@ import Booking from './Pages/Booking/Booking';
 import ManageEvent from './Pages/ManageEvent/ManageEvent';
 import MyEvents from './Pages/MyEvents/MyEvents';
 import AddEvent from './Pages/AddEvent/AddEvent';
+import NotFound from './Pages/NotFound/NotFound';
 function App() {
   return (
     <div className="">
@@ -50,6 +51,10 @@ function App() {
 
             <Route path='/login'>
               <Login></Login>
+            </Route>
+
+            <Route path='*'>
+              <NotFound></NotFound>
             </Route>
 
           </Switch>
