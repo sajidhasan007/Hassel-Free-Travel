@@ -9,9 +9,9 @@ const Allevents = (props) => {
     const { _id, event_name, event_img, description, event_fee, max_mamber, date } = events;
     // console.log(_id, event_name, event_img);
     return (
-        <Col key={events._id}>
-            <Card className='h-100'>
-                <div className='d-flex justify-content-center'>
+        <Col key={events._id} className='card-color'>
+            <Card className='h-100 '>
+                <div className='d-flex justify-content-center overflow'>
                     <Card.Img className='my-coustom d-flex justify-content-center' variant="top" src={event_img} />
                 </div>
                 <Card.Body>

@@ -12,31 +12,31 @@ const Achievement = () => {
 
 
                     <Container className='achievement-items mt-5 mb-5'>
-                        <div className='row row-cols-1 row-cols-md-2 row-cols-md-4 gx-5 text-color '>
+                        <div className='row row-cols-1 row-cols-md-2 row-cols-lg-4  text-color '>
 
-                            <div className='col'>
-                                <div className='Achievement-item text-center'>
+                            <div className='col '>
+                                <div className='Achievement-item text-center '>
                                     <h2>Happy Client</h2><br />
                                     <h3>800+</h3>
                                 </div>
                             </div>
 
                             <div className="col ">
-                                <div className='Achievement-item text-center'>
+                                <div className='Achievement-item text-center '>
                                     <h2>Experience</h2><br />
                                     <h3>5+ year</h3>
                                 </div>
                             </div>
 
-                            <div className="col">
-                                <div className='Achievement-item text-center'>
+                            <div className="col ">
+                                <div className='Achievement-item text-center '>
                                     <h2>Event Complete</h2><br />
                                     <h3>70</h3>
                                 </div>
                             </div>
 
-                            <div className="col">
-                                <div className='Achievement-item text-center'>
+                            <div className="col ">
+                                <div className='Achievement-item text-center '>
                                     <h2>Total Guide</h2><br />
                                     <h3>12</h3>
                                 </div>
