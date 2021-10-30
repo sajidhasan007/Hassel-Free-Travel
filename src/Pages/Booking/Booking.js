@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import { Col, Form, Row } from 'react-bootstrap';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import useAuth from '../Hooks/useAuth';
 import './Booking.css';
 
@@ -16,6 +16,7 @@ const Booking = () => {
     const phoneRef = useRef();
     const stationRef = useRef();
     const personRef = useRef();
+    const history = useHistory();
 
     useEffect(() => {
 
@@ -53,6 +54,7 @@ const Booking = () => {
                     alert('You have booked successfully');
                     e.target.reset();
                     event_book = {};
+                    history.push('/home')
                 }
             })
 

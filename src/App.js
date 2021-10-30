@@ -12,6 +12,7 @@ import PrivateRoute from './Pages/Privateroute/PrivateRoute';
 import Booking from './Pages/Booking/Booking';
 import ManageEvent from './Pages/ManageEvent/ManageEvent';
 import MyEvents from './Pages/MyEvents/MyEvents';
+import AddEvent from './Pages/AddEvent/AddEvent';
 function App() {
   return (
     <div className="">
@@ -37,6 +38,10 @@ function App() {
 
             <PrivateRoute path='/myEvents'>
               <MyEvents></MyEvents>
+            </PrivateRoute>
+
+            <PrivateRoute path='/addevent'>
+              <AddEvent></AddEvent>
             </PrivateRoute>
 
             <PrivateRoute path='/manageEvent'>

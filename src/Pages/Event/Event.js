@@ -1,24 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router';
+import { useLocation, useParams } from 'react-router';
 
 const Event = () => {
-
+    const location = useLocation();
     const { eventid } = useParams();
+    console.log(location);
 
     const [event, setEvent] = useState([]);
 
     useEffect(() => {
+        //console.log('inside from useeffect');
 
         fetch(`http://localhost:5000/event/${eventid}`)
             .then(res => res.json())
             .then(data => setEvent(data))
 
     }, [])
-    console.log();
+    //console.log(event.event_name);
     const particularservice = event[0] || {};
-    console.log(particularservice);
+    //console.log(particularservice.max_mamber);
     return (
 
         <div className='d-flex justify-content-center'>

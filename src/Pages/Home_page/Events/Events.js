@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Spinner } from 'react-bootstrap';
 import Allevents from '../../Allevents/Allevents';
 
 const Events = () => {
@@ -14,7 +14,13 @@ const Events = () => {
 
     }, [])
 
-    console.log(events);
+    if (!(events[0]?.event_name)) {
+        return <div>
+            <div className='d-flex justify-content-center'>
+                <Spinner animation="border" variant="primary" />
+            </div>
+        </div>
+    }
     return (
         <div className='services mb-5' id='service'>
             <div className='m-3 bg-primary text-center text-white'>

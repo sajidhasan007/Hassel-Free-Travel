@@ -7,7 +7,7 @@ const Allevents = (props) => {
     const events = props.events;
     //const { id, name, img } = events;
     const { _id, event_name, event_img, description, event_fee, max_mamber, date } = events;
-    console.log(_id, event_name, event_img);
+    // console.log(_id, event_name, event_img);
     return (
         <Col key={events._id}>
             <Card>
