@@ -8,14 +8,14 @@ const ManageEvent = () => {
     const [bookedevents, setBookevents] = useState([]);
     const [done, setDone] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/manageEvent')
+        fetch('https://mighty-reaches-03341.herokuapp.com/manageEvent')
             .then(res => res.json())
             .then(data => setBookevents(data))
     }, [done])
     // console.log(bookedevents);
     const handledeletebook = id => {
         //console.log('deleted is is = ', id);
-        fetch(`http://localhost:5000/deleteevent/${id}`, { method: 'DELETE' })
+        fetch(`https://mighty-reaches-03341.herokuapp.com/deleteevent/${id}`, { method: 'DELETE' })
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount) {
@@ -27,7 +27,7 @@ const ManageEvent = () => {
     }
     const handleapprove = id => {
         console.log(id);
-        const url = `http://localhost:5000/manageEvent/${id}`;
+        const url = `https://mighty-reaches-03341.herokuapp.com/manageEvent/${id}`;
         const status = {
             status: 'approve'
         }

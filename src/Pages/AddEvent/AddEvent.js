@@ -12,7 +12,7 @@ const AddEvent = () => {
         console.log(data);
 
 
-        fetch('http://localhost:5000/addevent', {
+        fetch('https://mighty-reaches-03341.herokuapp.com/addevent', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -28,7 +28,7 @@ const AddEvent = () => {
 
 
         //console.log(data);
-        /*  axios.post('http://localhost:5000/addevent', data)
+        /*  axios.post('https://mighty-reaches-03341.herokuapp.com//addevent', data)
              .then(res => {
                  if (res.data.insertedId) {
                      alert('successfully inserter');

@@ -20,7 +20,7 @@ const Booking = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/event/${eventid}`)
+        fetch(`https://mighty-reaches-03341.herokuapp.com/event/${eventid}`)
             .then(res => res.json())
             .then(data => setEvent(data[0]))
 
@@ -43,7 +43,7 @@ const Booking = () => {
         //console.log(event_book);
         // console.log(stationRef.current.value);
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://mighty-reaches-03341.herokuapp.com/booking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(event_book)

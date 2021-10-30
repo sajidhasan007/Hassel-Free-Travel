@@ -14,7 +14,7 @@ const MyEvents = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/myevents', {
+        fetch('https://mighty-reaches-03341.herokuapp.com/myevents', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(email)
@@ -29,7 +29,7 @@ const MyEvents = () => {
 
     const handledelete = id => {
         //console.log('deleted is is = ', id);
-        fetch(`http://localhost:5000/deleteevent/${id}`, { method: 'DELETE' })
+        fetch(`https://mighty-reaches-03341.herokuapp.com/deleteevent/${id}`, { method: 'DELETE' })
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount) {

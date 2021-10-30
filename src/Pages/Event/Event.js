@@ -13,7 +13,7 @@ const Event = () => {
     useEffect(() => {
         //console.log('inside from useeffect');
 
-        fetch(`http://localhost:5000/event/${eventid}`)
+        fetch(`https://mighty-reaches-03341.herokuapp.com/event/${eventid}`)
             .then(res => res.json())
             .then(data => setEvent(data))
 
