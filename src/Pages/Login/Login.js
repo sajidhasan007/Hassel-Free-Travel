@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../Hooks/useAuth';
+import './Login.css'
 
 const Login = () => {
     const { setUser, googleSignin, isLoading, setIsLoading, isLogin,
@@ -30,8 +31,8 @@ const Login = () => {
             .finally(() => setIsLoading(false));
     }
     return (
-        <div>
-            <div className='d-flex justify-content-center'>
+        <div className='login-coustom d-flex align-items-center justify-content-center'>
+            <div className=''>
                 <button variant="warning" className="btn btn-warning" onClick={handlegooglelogin}>Google LogIn</button>
             </div>
         </div>
