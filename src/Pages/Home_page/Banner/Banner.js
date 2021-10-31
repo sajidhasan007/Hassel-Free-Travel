@@ -20,7 +20,7 @@ const Banner = () => {
                         src={banner1}
                         alt="First slide"
                     />
-                    <Carousel.Caption>
+                    <Carousel.Caption className='carousel-title'>
                         <h3>Our Last Month Tour (Rangamati) </h3>
                         <p>That was a fimily tour so we accept male and female</p>
                     </Carousel.Caption>
@@ -32,7 +32,7 @@ const Banner = () => {
                         alt="Second slide"
                     />
 
-                    <Carousel.Caption>
+                    <Carousel.Caption className='carousel-title'>
                         <h3>Our Last Month Tour at Nijom Deep</h3>
                         <p>That tour was not a family tour so we did not allow female traveler</p>
                     </Carousel.Caption>
@@ -44,7 +44,7 @@ const Banner = () => {
                         alt="Third slide"
                     />
 
-                    <Carousel.Caption>
+                    <Carousel.Caption className='carousel-title'>
                         <h3>Monst Attractive Waterfall "Nafa Khum"</h3>
                         <p>This tour is so hard you have to walk 5-8 hour to react here</p>
                     </Carousel.Caption>
@@ -56,7 +56,7 @@ const Banner = () => {
                         alt="Fourth slide"
                     />
 
-                    <Carousel.Caption>
+                    <Carousel.Caption className='carousel-title'>
                         <h3>This is Our Hassle Free Travel Team</h3>
                         <p>Here we are six admin and we have six sub-admin in total 12 person</p>
                     </Carousel.Caption>

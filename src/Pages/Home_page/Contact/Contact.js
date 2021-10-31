@@ -20,7 +20,7 @@ const Contact = () => {
                     <div>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             {/* include validation with required or other standard HTML validation rules */}
-                            <input className='py-2 px-3 border-rounded' {...register("exampleRequired", { required: true })} placeholder='Your email' />
+                            <input className='py-2 px-3 border-rounded mb-2' {...register("exampleRequired", { required: true })} placeholder='Your email' />
                             {/* errors will return when field validation fails  */}
                             {errors.exampleRequired && <span>This field is required</span>}
 
