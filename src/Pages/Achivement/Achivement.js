@@ -6,13 +6,14 @@ import './Achivement.css';
 const Achievement = () => {
     return (
         <div className=' achievement-custom m-3 '>
-            <h1 className='bg-secondary text-white text-center'>Our Achievement</h1>
+            {/* <h1 className='bg-secondary text-white text-center'>Our Achievement</h1> */}
             <div className=''>
                 <div>
 
 
                     <Container className='achievement-items mt-5 mb-5'>
-                        <div className='row row-cols-1 row-cols-md-2 row-cols-lg-4  text-color '>
+                        <div className='row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5 text-color '>
+
 
                             <div className='col '>
                                 <div className='Achievement-item text-center '>
@@ -20,6 +21,7 @@ const Achievement = () => {
                                     <h3>800+</h3>
                                 </div>
                             </div>
+
 
                             <div className="col ">
                                 <div className='Achievement-item text-center '>

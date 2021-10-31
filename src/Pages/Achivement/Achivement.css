@@ -13,3 +13,11 @@
 .achievement-items{
     margin: auto;
 }
+.achievement-custom{
+    background-image: url('https://sgp1.digitaloceanspaces.com/cosmosgroup/news/y8eC0WBzPEEVyKIGGjcM3zKIgirEYLTLvioF3GaP.jpeg');
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    
+}

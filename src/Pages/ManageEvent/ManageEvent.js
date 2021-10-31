@@ -15,15 +15,21 @@ const ManageEvent = () => {
     // console.log(bookedevents);
     const handledeletebook = id => {
         //console.log('deleted is is = ', id);
-        fetch(`https://mighty-reaches-03341.herokuapp.com/deleteevent/${id}`, { method: 'DELETE' })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount) {
-                    alert('Delete successful');
-                    const remaining = bookedevents.filter(item => item._id !== id);
-                    setBookevents(remaining);
-                }
-            })
+        const isConfirmDelete = window.confirm("Are you sure to delete this item");
+        if (isConfirmDelete) {
+            fetch(`https://mighty-reaches-03341.herokuapp.com/deleteevent/${id}`, { method: 'DELETE' })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        alert('Delete successful');
+                        const remaining = bookedevents.filter(item => item._id !== id);
+                        setBookevents(remaining);
+                    }
+                })
+        }
+
+
+
     }
     const handleapprove = id => {
         console.log(id);

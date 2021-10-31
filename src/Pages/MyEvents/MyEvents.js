@@ -29,15 +29,18 @@ const MyEvents = () => {
 
     const handledelete = id => {
         //console.log('deleted is is = ', id);
-        fetch(`https://mighty-reaches-03341.herokuapp.com/deleteevent/${id}`, { method: 'DELETE' })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount) {
-                    alert('Delete successful');
-                    const remaining = myEvents.filter(item => item._id !== id);
-                    setMyEvents(remaining);
-                }
-            })
+        const isConfirmDelete = window.confirm("Are you sure to delete this item");
+        if (isConfirmDelete) {
+            fetch(`https://mighty-reaches-03341.herokuapp.com/deleteevent/${id}`, { method: 'DELETE' })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        alert('Delete successful');
+                        const remaining = myEvents.filter(item => item._id !== id);
+                        setMyEvents(remaining);
+                    }
+                })
+        }
     }
 
     return (

@@ -13,7 +13,7 @@ const Banner = () => {
 
         <>
             {/* <Container> */}
-            <Carousel className='m-3' id='#home'>
+            <Carousel className='m-3'>
                 <Carousel.Item>
                     <img
                         className="d-block w-100 img-style"
