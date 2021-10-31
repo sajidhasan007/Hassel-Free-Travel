@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" sticky="top" bg="primary" variant="dark" className='mb-3 p-0 '>
+            <Navbar collapseOnSelect expand="lg" sticky="top" bg="primary" variant="dark" className='mb-3 p-1 '>
                 <Container>
                     <Link to="/home"><img className='brand-logo' src="https://w7.pngwing.com/pngs/18/760/png-transparent-hotel-business-travel-economics-voucher-travel-booking-text-logo-business.png" alt="" /></Link>
                     <Navbar.Toggle />
@@ -37,7 +37,7 @@ const Header = () => {
                                 <button className='btn btn-danger' onClick={handlesignout}>SignOut</button>
                             </>
                             :
-                            <Nav.Link as={HashLink} to="/login">LogIn</Nav.Link>
+                            <Nav.Link as={HashLink} to="/login" className='header-item'>LogIn</Nav.Link>
                         }
 
 

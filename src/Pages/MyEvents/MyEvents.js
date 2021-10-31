@@ -1,11 +1,13 @@
+import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 import './MyEvent.css';
 
 const MyEvents = () => {
     const [myEvents, setMyEvents] = useState([]);
+
     const { user } = useAuth();
     const email = {
         email: user?.email
@@ -28,6 +30,7 @@ const MyEvents = () => {
 
 
     const handledelete = id => {
+
         //console.log('deleted is is = ', id);
         const isConfirmDelete = window.confirm("Are you sure to delete this item");
         if (isConfirmDelete) {
@@ -38,6 +41,7 @@ const MyEvents = () => {
                         alert('Delete successful');
                         const remaining = myEvents.filter(item => item._id !== id);
                         setMyEvents(remaining);
+
                     }
                 })
         }
@@ -48,7 +52,6 @@ const MyEvents = () => {
             <div className='text-center'>
                 <h1>All Orders of <span className='special-text'>{user.name}</span></h1>
             </div>
-
             <div>
                 {myEvents.map(item => <div key={item._id}>
                     <Container>
@@ -64,10 +67,12 @@ const MyEvents = () => {
 
                             <Link to={`/event/${item._id}`}><button className='btn btn-warning '>Details</button></Link>
                             <button onClick={() => handledelete(item._id)} className='btn btn-danger ms-2'>Delete</button>
+
                         </div>
                     </Container>
                 </div>)}
             </div>
+
 
         </div>
     );

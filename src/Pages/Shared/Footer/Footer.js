@@ -1,5 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
+import footer1 from '../../../images/Footer/F1.png';
+import footer2 from '../../../images/Footer/f2.png';
+import footer3 from '../../../images/Footer/f3.jpg';
+import footer4 from '../../../images/Footer/f4.png';
 
 const Footer = () => {
     return (
@@ -7,9 +12,13 @@ const Footer = () => {
             <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3  text-white p-3'>
 
                 <div className=' border border border-success p-3 overflow-auto col'>
-                    <h3 className='mb-4'>Hassale Free Travle</h3>
+                    <h3 className='mb-4'>Necessary Links</h3>
                     <p className='text-start'>
-                        We are commited to give you better service. We have different type of tour experts so that you can get better experience with us. we have installment polecy if you want you can pay your due step by step.For women we have special care.
+                        <Link to='/home' className='footer-link'>Home</Link><br />
+                        <Link to="/myEvents" className='footer-link'>My Events</Link><br />
+                        <Link to="/addevent" className='footer-link'>Add Event</Link><br />
+                        <Link to="/manageEvent" className='footer-link'>Manage Event</Link>
+
                     </p>
                 </div>
 
@@ -24,15 +33,15 @@ const Footer = () => {
                     </address>
                 </div>
                 <div className=' border border-success p-3 overflow-auto col'>
-                    <h3 className='mb-4'>Opening Hours</h3>
+                    <h3 className='mb-4 text-center'>Payment</h3>
 
-                    <div className='d-flex justify-content-between'>
-                        <p>Sat - Thus :</p>
-                        <p>09.00 am - 10.00 pm</p>
+                    <div className='d-flex justify-content-center mb-3'>
+                        <img className='footer-img me-2' src={footer1} alt="" />
+                        <img className='footer-img' src={footer2} alt="" />
                     </div>
-                    <div className='d-flex justify-content-between'>
-                        <p>Friday :</p>
-                        <p>Closed</p>
+                    <div className='d-flex justify-content-center'>
+                        <img className='footer-img me-2' src={footer3} alt="" />
+                        <img className='footer-img' src={footer4} alt="" />
                     </div>
 
                 </div>
