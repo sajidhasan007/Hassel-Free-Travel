@@ -12,8 +12,8 @@ const Footer = () => {
             <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3  text-white p-3'>
 
                 <div className=' border border border-success p-3 overflow-auto col'>
-                    <h3 className='mb-4'>Necessary Links</h3>
-                    <p className='text-start'>
+                    <h3 className='mb-4 text-center'>Necessary Links</h3>
+                    <p className='text-center'>
                         <Link to='/home' className='footer-link'>Home</Link><br />
                         <Link to="/myEvents" className='footer-link'>My Events</Link><br />
                         <Link to="/addevent" className='footer-link'>Add Event</Link><br />
@@ -23,8 +23,8 @@ const Footer = () => {
                 </div>
 
                 <div className=' border border-success p-3 overflow-auto col'>
-                    <h3 className='mb-4'>Address</h3>
-                    <address>
+                    <h3 className='mb-4 text-center'>Address</h3>
+                    <address className='text-center'>
                         Khagan, Birulia, Savar, Dhaka-1216
                         <br />
                         Cell: +880 1854-640476,
