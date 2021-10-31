@@ -1,6 +1,6 @@
 # This is a Travel booking service website
 
-This is a simple project for tour event booking and here is the live site link [Create React App](https://travel-booking-f3a12.web.app/).
+This is a simple project for tour event booking and here is the live site link [Booking site](https://travel-booking-f3a12.web.app/).
 
 ## Website Features
 
